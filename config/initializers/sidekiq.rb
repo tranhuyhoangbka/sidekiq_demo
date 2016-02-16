@@ -4,6 +4,7 @@ PORT = REDIS_CONFIG["port"]
 
 Sidekiq.configure_server do |config|
   config.redis = {url: "redis://#{HOST}:#{PORT}/12"}
+  config.average_scheduled_poll_interval = 30
 end
 
 Sidekiq.configure_client do |config|
