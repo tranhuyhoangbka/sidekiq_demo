@@ -1,4 +1,6 @@
 ---
+:verbose: false
+:logfile: ./log/sidekiq.log
 :concurrency: 5
 staging:
   :concurrency: 10
@@ -7,3 +9,4 @@ production:
 :queues:
   - critical
   - default
+  - low
